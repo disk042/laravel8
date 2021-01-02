@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('hello', 'HelloController@index')はLaravel7まで適用可能。8以降は下記の書き方になる。
+// Route::get('hello', [HelloController::class, 'index'])
+
 Route::get('hello', [HelloController::class, 'index']);
+Route::post('hello', [HelloController::class, 'post']);
