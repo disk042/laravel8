@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/laravel8.iml" filepath="$PROJECT_DIR$/.idea/laravel8.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/docker-laravel.iml" filepath="$PROJECT_DIR$/.idea/docker-laravel.iml" />
->>>>>>> cb6b8b181e5aedee1bd70f8ab23a9f046462cdcd
     </modules>
   </component>
 </project>
