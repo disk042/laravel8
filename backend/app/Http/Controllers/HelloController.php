@@ -67,8 +67,6 @@ class HelloController extends Controller
         DB::table('people')->where('id', $request->id)->delete();
         return redirect('/hello');
     }
-
-
     public function show(Request $request)
     {
         $page = $request->page;
@@ -77,5 +75,6 @@ class HelloController extends Controller
             ->limit(2)
             ->get();
         return view('hello.show', ['items' => $items]);
+
     }
 }
