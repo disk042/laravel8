@@ -56,6 +56,19 @@ class HelloController extends Controller
         return redirect('/hello');
     }
 
+    public function del(Request $request)
+    {
+        $item = DB::table('people')->where('id', $request->id)->first();
+        return view('hello.del', ['form' => $item]);
+    }
+
+    public function remove(Request $request)
+    {
+        DB::table('people')->where('id', $request->id)->delete();
+        return redirect('/hello');
+    }
+
+
     public function show(Request $request)
     {
         $page = $request->page;
