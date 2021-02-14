@@ -12,7 +12,7 @@ class HelloController extends Controller
 {
     public function index(Request $request)
     {
-        $items = DB::select('select * from people');
+        $items = DB::table('people')->get();
         return view('hello.index', ['items' => $items]);
     }
 
@@ -55,5 +55,12 @@ class HelloController extends Controller
             ];
         DB::update('update people set name = :name, mail = :mail, age = :age where id = :id', $param);
         return redirect('/hello');
+    }
+
+    public function show(Request $request)
+    {
+        $id = $request->id;
+        $item = DB::table('people')->where('id', $id)->first();
+        return view('hello.show', ['item' => $item]);
     }
 }
