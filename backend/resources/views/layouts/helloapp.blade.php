@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>@yield('title')</title>
     <style>
     body {font-size:16pt; color:#999; margin: 5px;}
